@@ -167,6 +167,9 @@ type GoSNMP struct {
 
 	// Internal - we use to send packets if using unconnected socket.
 	uaddr *net.UDPAddr
+
+	// Internal - are we an agent or a client
+	isAgent bool
 }
 
 // Default connection settings
@@ -270,16 +273,19 @@ const (
 // For historical reasons (ie this is part of the public API), the method won't
 // be renamed to Dial().
 func (x *GoSNMP) Connect() error {
+	x.isAgent = false
 	return x.connect("")
 }
 
 // ConnectIPv4 forces an IPv4-only connection
 func (x *GoSNMP) ConnectIPv4() error {
+	x.isAgent = false
 	return x.connect("4")
 }
 
 // ConnectIPv6 forces an IPv6-only connection
 func (x *GoSNMP) ConnectIPv6() error {
+	x.isAgent = false
 	return x.connect("6")
 }
 

@@ -5,7 +5,7 @@ gosnmp
 [![Build Status](https://circleci.com/gh/gosnmp/gosnmp.svg?style=shield)](https://circleci.com/gh/gosnmp/gosnmp/tree/master)
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/gosnmp/gosnmp)](https://pkg.go.dev/github.com/gosnmp/gosnmp)
 
-GoSNMP is an SNMP client library fully written in Go. It provides Get,
+GoSNMP is an SNMP library fully written in Go. It provides Get,
 GetNext, GetBulk, Walk, BulkWalk, Set and Traps. It supports IPv4 and
 IPv6, using __SNMPv1__, __SNMPv2c__ or __SNMPv3__. Builds are tested against
 linux/amd64 and linux/386.
